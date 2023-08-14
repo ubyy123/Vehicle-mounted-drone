@@ -1,0 +1,40 @@
+server:
+  port: 8092
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/logistic?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai"
+    username: root
+    password: ss
+  redis:
+    port: 6379
+    host: localhost
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  profiles:
+    # \u5F15\u5165application-email\u914D\u7F6E\u6587\u4EF6
+    include: email
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
+mybatis-plus:
+  # 配置Mapper映射文件
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  #配置mybatis数据返回类型别名（默认名时类名）
+  type-aliases-package: com.ubyy.pojo
+  configuration:
+    # 自动驼峰命名关闭
+    map-underscore-to-camel-case: false
+
+# Mybatis SQL 打印
+logging:
+  level:
+    com.xxxx.server.mapper: debug

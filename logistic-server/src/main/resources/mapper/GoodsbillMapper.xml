@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ubyy.mapper.GoodsbillMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ubyy.pojo.Goodsbill">
+        <result column="sendGoodCustomNo" property="sendGoodCustomNo" />
+        <result column="sendGoodCustom" property="sendGoodCustom" />
+        <result column="sendGoodCustomTel" property="sendGoodCustomTel" />
+        <result column="sendAddress" property="sendAddress" />
+        <result column="acceptGoodCustom" property="acceptGoodCustom" />
+        <result column="acceptGoodCustomTel" property="acceptGoodCustomTel" />
+        <result column="acceptAddress" property="acceptAddress" />
+        <result column="delivertDate" property="delivertDate" />
+        <!--<result column="preDelivertDate" property="preDelivertDate" />-->
+        <!--<result column="actualDelivertData" property="actualDelivertData" />-->
+        <result column="shipStatus" property="shipStatus"/>
+        <result column="acceptDate" property="acceptDate"/>
+    </resultMap>
+
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        sendGoodCustomNo, sendGoodCustom, sendGoodCustomTel, sendAddress, acceptGoodCustom, acceptGoodCustomTel, acceptAddress, delivertDate, preDelivertDate, actualDelivertData, shipStatus, acceptDate
+    </sql>
+
+    <!-- 根据订单号查询订单信息-->
+    <select id="getByNo" resultMap="BaseResultMap">
+        SELECT goodsbill.*
+        FROM goodsbill
+        WHERE goodsbill.sendGoodCustomNo = #{sendGoodCustomNo}
+    </select>
+
+    <!-- 根据用户查询订单信息-->
+    <select id="getBillByCustom" resultMap="BaseResultMap">
+        SELECT *
+        FROM goodsbill
+        WHERE goodsbill.acceptGoodCustom LIKE CONCAT("%", #{acceptGoodCustom}, "%")
+    </select>
+
+    <!-- 显示所有未交付订单-->
+    <select id="unfilledOrders" resultMap="BaseResultMap">
+        SELECT goodsbill.*
+        FROM goodsbill
+        WHERE goodsbill.shipStatus = #{choose}
+    </select>
+
+    <!-- 根据收件人手机号查询订单信息-->
+    <select id="getBillByTel" resultMap="BaseResultMap">
+        SELECT *
+        FROM goodsbill
+        WHERE goodsbill.acceptGoodCustomTel LIKE CONCAT("%", #{getBillByTel}, "%")
+    </select>
+
+    <!--<select id="getGoodsCount" resultMap="BaseResultMap">-->
+
+    <!--</select>>-->
+
+</mapper>

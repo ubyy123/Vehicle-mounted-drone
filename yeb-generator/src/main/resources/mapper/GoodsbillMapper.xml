@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="GoodsbillMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="Goodsbill">
+        <id column="goods_bill_code" property="goods_bill_code" />
+        <result column="accept_procedure_rate" property="accept_procedure_rate" />
+        <result column="accept_station" property="accept_station" />
+        <result column="carriage" property="carriage" />
+        <result column="carry_goods_fee" property="carry_goods_fee" />
+        <result column="employee_code" property="employee_code" />
+        <result column="fact_deal_date" property="fact_deal_date" />
+        <result column="fetch_goods_mode" property="fetch_goods_mode" />
+        <result column="help_accept_payment" property="help_accept_payment" />
+        <result column="if_audit" property="if_audit" />
+        <result column="if_settle_accounts" property="if_settle_accounts" />
+        <result column="insurance" property="insurance" />
+        <result column="money_of_change_pay" property="money_of_change_pay" />
+        <result column="pay_kickback" property="pay_kickback" />
+        <result column="pay_mode" property="pay_mode" />
+        <result column="predelivery_date" property="predelivery_date" />
+        <result column="receive_goods_addr" property="receive_goods_addr" />
+        <result column="receive_goods_customer" property="receive_goods_customer" />
+        <result column="receive_goods_customer_addr" property="receive_goods_customer_addr" />
+        <result column="receive_goods_customer_code" property="receive_goods_customer_code" />
+        <result column="receive_goods_customer_tel" property="receive_goods_customer_tel" />
+        <result column="reduce_fund" property="reduce_fund" />
+        <result column="remark" property="remark" />
+        <result column="send_goods_addr" property="send_goods_addr" />
+        <result column="send_goods_customer" property="send_goods_customer" />
+        <result column="send_goods_customer_addr" property="send_goods_customer_addr" />
+        <result column="send_goods_customer_no" property="send_goods_customer_no" />
+        <result column="send_goods_customer_tel" property="send_goods_customer_tel" />
+        <result column="send_goods_date" property="send_goods_date" />
+        <result column="transfer_fee" property="transfer_fee" />
+        <result column="transfer_station" property="transfer_station" />
+        <result column="validity" property="validity" />
+        <result column="write_bill_person" property="write_bill_person" />
+        <result column="write_date" property="write_date" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        goods_bill_code, accept_procedure_rate, accept_station, carriage, carry_goods_fee, employee_code, fact_deal_date, fetch_goods_mode, help_accept_payment, if_audit, if_settle_accounts, insurance, money_of_change_pay, pay_kickback, pay_mode, predelivery_date, receive_goods_addr, receive_goods_customer, receive_goods_customer_addr, receive_goods_customer_code, receive_goods_customer_tel, reduce_fund, remark, send_goods_addr, send_goods_customer, send_goods_customer_addr, send_goods_customer_no, send_goods_customer_tel, send_goods_date, transfer_fee, transfer_station, validity, write_bill_person, write_date
+    </sql>
+
+</mapper>

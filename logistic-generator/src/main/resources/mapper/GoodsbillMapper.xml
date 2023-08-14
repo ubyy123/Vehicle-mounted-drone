@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ubyy.mapper.GoodsbillMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ubyy.pojo.Goodsbill">
+        <result column="sendGoodCustomNo" property="sendGoodCustomNo" />
+        <result column="sendGoodCustom" property="sendGoodCustom" />
+        <result column="sendGoodCustomTel" property="sendGoodCustomTel" />
+        <result column="sendAddress" property="sendAddress" />
+        <result column="acceptGoodCustom" property="acceptGoodCustom" />
+        <result column="acceptGoodCustomTel" property="acceptGoodCustomTel" />
+        <result column="acceptAddress" property="acceptAddress" />
+        <result column="delivertDate" property="delivertDate" />
+        <result column="preDelivertDate" property="preDelivertDate" />
+        <result column="actualDelivertData" property="actualDelivertData" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        sendGoodCustomNo, sendGoodCustom, sendGoodCustomTel, sendAddress, acceptGoodCustom, acceptGoodCustomTel, acceptAddress, delivertDate, preDelivertDate, actualDelivertData
+    </sql>
+
+</mapper>

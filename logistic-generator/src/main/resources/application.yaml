@@ -1,0 +1,26 @@
+server:
+  port: 8091
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/logistic?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai"
+    username: root
+    password: ss
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
+mybatis-plus:
+  # 配置Mapper映射文件
+  mapper-locations: classpath*:/mapper/*mapper.xml
+  #配置mybatis数据返回类型别名（默认名时类名）
+  type-aliases-package: com.xxxx.server.pojo
+  configuration:
+    # 自动驼峰命名关闭
+    map-underscore-to-camel-case: false
