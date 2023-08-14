@@ -3,12 +3,14 @@
 # 系统模块
     该系统包括物资管理模块、算法运行模块、算法性能比较模块、算法对比可视化模块以及配送管理模块。如下图所示：
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/135f0274-3a30-46a0-b5b0-4ca625838c72)
+
 ## 物资管理模块
     物资管理模块包括实时展示物资货存模块、历史物资数据模块、增加物资信息模块、删除物资信息模块、修改物资信息模块和查看物资信息模块。其中：
     实时展示物资货存模块用于将现有的物资货存以饼状图的形式可视化的展示出来；
     历史物资数据模块用于将每日历史数据包括已配送物资数据和物资总数量用拖拽折线图的形式动态的展示出来；
     增加物资信息模块、删除物资信息模块、修改物资信息模块和查看物资信息模块分别用于实时对物资信息进行增加、删除、修改和查看操作。
     具体效果如下图所示：
+    
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/382d7afd-47b1-49ca-8205-f2aff82e2a06)
 
 ## 算法运行模块
@@ -17,6 +19,7 @@
     实时算法模块用于选择物资数据集后即可实时的运行算法，结合交通拓扑，实时的生成路线结果；
     历史数据算法模块用于选择相对应的日期及其时间段后，便生成相对应时间段的物流数据集，然后调用实施算法得到路线方案。
     具体效果如下图所示：
+    
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/cdf177b1-748b-48cf-b3a0-0391bb173e3e)
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/ad07e46d-6d52-4414-8d2f-933155f077e2)
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/a77d138c-0688-4eb7-bb89-d462ed922e0d)
@@ -28,6 +31,7 @@
     基于无人机不同载荷的性能比较模块用于画出本系统使用的算法和另外两个对比算法在无人机的最大载荷分别为8kg、9kg、10kg、11kg、12kg的情况下，无人机总飞行距离和车辆总行驶距离的对比折线图，并画出了在无人机最大载荷不同情况下无人机总飞行距离与车辆总行驶距离之比的对比图；
     基于用户不同需求的性能比较模块用于画出本系统使用的算法和另外两个对比算法在客户需求分别为1kg、2kg、3kg、4kg和5kg的情况下，无人机总飞行距离和车辆总行驶距离的对比折线图，并画出了在客户需求不同情况下无人机总飞行距离与车辆总行驶距离之比的对比图。
     具体效果如下图所示：
+    
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/f2ff8e1d-1ddf-4ec1-b846-333003210d40)
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/df23901f-b674-4fed-b1cc-5213b8b98179)
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/eb095787-985c-4854-a75f-3674791d0da2)
@@ -40,6 +44,7 @@
     运行成本对比模块是指基于不同交通环境和基于不同客户数量的对比图中所需要的运行成本的对比，运行成本的计算具体为车辆行驶每公里为1元，无人机行驶每公里为0.5元；
     运行时间对比模块是指基于不同交通环境和基于不同客户数量的对比图中不同算法得出的运输线路，其所需要的运行时间的对比。
     具体效果如下图所示：
+    
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/963a0299-55a5-4df1-ba0d-f3ee99847342)
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/f68bc509-f853-4db2-8a87-8416c1de23ac)
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/2fa0acdb-3232-49fa-95b2-783efa3fc65c)
@@ -53,5 +58,6 @@
     物资配送站点统计模块用于将历史物资配送站点进行统计，并且使用频率散点图可视化的展示出来；
     物资路线可视化模块用于将算法所运行出来的路线结果动态可视化的展示出来。
     具体效果如下图所示：
+    
 ![image](https://github.com/ubyy123/Vehicle-mounted-drone/assets/106729728/c0c077a3-6380-423b-a58c-8f47d8b4f4bd)
 
